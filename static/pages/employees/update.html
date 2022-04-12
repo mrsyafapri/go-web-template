@@ -1,0 +1,23 @@
+{{template "layout" .}}
+
+{{define "main"}}
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <h1>Add new Employee</h1>
+        <hr class="my-2">
+        <form method="POST">
+            <label for="">Name</label>
+            <input value="{{.Data.Name}}" type="text" name="name" class="form-control mb-3">
+
+            <label for="">NIP</label>
+            <input value="{{.Data.NIP}}" type="text" name="nip" class="form-control mb-3">
+
+            <label for="">Address</label>
+            <input value="{{.Data.Address}}" type="text" name="address" class="form-control mb-3">
+
+            <button class="btn btn-success" type="submit">Ubah Data Pegawai</button>
+        </form>
+    </div>
+</div>
+
+{{end}}

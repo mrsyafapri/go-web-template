@@ -1,0 +1,44 @@
+{{template "layout" .}}
+
+{{define "main"}}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <h1>{{.Title}}</h1>
+
+        <a href="employees/add" class="btn btn-primary btn-sm">
+            Tambah Employees
+        </a>
+
+        <div class="row my-2">
+            <div class="col-md-12 ">
+                <table class="table table-bordered table-hover rounded">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>NIP</th>
+                            <th>Alamat</th>
+                            <th>Dibuat Tanggal</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .Data}}
+                        <tr>
+                            <td>{{.Name}}</td>
+                            <td>{{.NIP}}</td>
+                            <td>{{.Address}}</td>
+                            <td>{{.CreatedAt}}</td>
+                            <td>
+                                <a href="employees/update?id={{.ID}}" class="btn btn-success btn-sm">Ubah</a>
+                                <a href="employees/delete?id={{.ID}}" class="btn btn-outline-danger btn-sm">Hapus</a>
+                            </td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{end}}
