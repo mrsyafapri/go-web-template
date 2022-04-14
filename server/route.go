@@ -24,6 +24,7 @@ func buildRoute(router *mux.Router, db *sql.DB) {
 	homeRoute(router)
 	employeeRoute(router, db)
 	menuRouteAPI(router, db)
+	transactionRoute(router)
 }
 
 func homeRoute(router *mux.Router) {
@@ -48,4 +49,9 @@ func menuRouteAPI(router *mux.Router, db *sql.DB) {
 	router.HandleFunc("/api/menus/{id}", menuController.FindByID).Methods("GET")
 	router.HandleFunc("/api/menus/{id}", menuController.UpdateByID).Methods("PUT")
 	router.HandleFunc("/api/menus/{id}", menuController.DeleteByID).Methods("DELETE")
+}
+
+func transactionRoute(router *mux.Router) {
+	transactionController := controllers.NewTransactionController()
+	router.HandleFunc("/transactions", transactionController.Index)
 }

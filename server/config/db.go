@@ -9,6 +9,7 @@ import (
 )
 
 func CreateConnection() *sql.DB {
+	// DB info
 	host := "localhost"
 	port := "5432"
 	user := "postgres"
