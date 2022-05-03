@@ -8,8 +8,8 @@ import (
 
 type Transaction struct {
 	ID        uuid.UUID
-	Employee  string
-	Menu      string
+	Employee  Employee
+	Menu      Menu
 	CreatedAt time.Time
 	UpdatedAt time.Time
 }

@@ -1,6 +1,14 @@
 {{template "layout" .}}
 
 {{define "main"}}
-<h1>{{.Title}}</h1>
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <h1>{{.Title}}</h1>
+
+        <a href="transactions/add" class="btn btn-primary btn-sm">
+            Tambah Transactions
+        </a>
+    </div>
+</div>
 
 {{end}}
