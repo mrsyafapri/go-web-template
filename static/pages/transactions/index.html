@@ -8,6 +8,29 @@
         <a href="transactions/add" class="btn btn-primary btn-sm">
             Tambah Transactions
         </a>
+
+        <div class="row my-2">
+            <div class="col-md-12 ">
+                <table class="table table-bordered table-hover rounded">
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Menu</th>
+                            <th>Dibuat Tanggal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .Data}}
+                        <tr>
+                            <td>{{.Employee}}</td>
+                            <td>{{.Menu}}</td>
+                            <td>{{.CreatedAt}}</td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
 

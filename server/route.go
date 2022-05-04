@@ -52,7 +52,5 @@ func menuRouteAPI(router *mux.Router, db *sql.DB) {
 func transactionRoute(router *mux.Router, db *sql.DB) {
 	transactionController := controllers.NewTransactionController(db)
 	router.HandleFunc("/transactions", transactionController.Index)
-	router.HandleFunc("/transactions/update", transactionController.UpdateByID)
 	router.HandleFunc("/transactions/add", transactionController.Add)
-	router.HandleFunc("/transactions/delete", transactionController.DeleteByID)
 }

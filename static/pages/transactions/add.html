@@ -1,0 +1,20 @@
+{{template "layout" .}}
+
+{{define "main"}}
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <h1>Add new Transaction</h1>
+        <hr class="my-2">
+        <form method="POST">
+            <label for="">Employee</label>
+            <input type="text" name="employee" class="form-control mb-3">
+
+            <label for="">Menu</label>
+            <input type="text" name="menu" class="form-control mb-3">
+
+            <button class="btn btn-primary" type="submit">Tambah Transaksi Baru</button>
+        </form>
+    </div>
+</div>
+
+{{end}}
